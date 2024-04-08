@@ -1,16 +1,13 @@
-// Obtém o custo de fábrica do carro do primeiro argumento da linha de comando
-const custoFabrica = parseFloat(process.argv[2]);
+const prompt = require('prompt-sync') ();
 
-// Define os percentuais do distribuidor e dos impostos
-const percentualDistribuidor = 0.28;
-const percentualImpostos = 0.45;
 
-// Calcula o custo do distribuidor e o custo dos impostos
-const custoDistribuidor = custoFabrica * percentualDistribuidor;
-const custoImpostos = custoFabrica * percentualImpostos;
+percentual_Disstribuidor =0.28;
+percentual_Impostos = 0.45;
 
-// Calcula o custo final ao consumidor
-const custoConsumidor = custoFabrica + custoDistribuidor + custoImpostos;
+const valorCustro= Number(prompt("qual o valor de custo do veiculo ? R$"));
 
-// Exibe o custo final ao consumidor formatado
-console.log("Custo final ao consumidor: R$ " + custoConsumidor.toFixed(2));
+custo_distribuidor = valorCustro * percentual_Disstribuidor;
+custo_impostos = valorCustro * percentual_Impostos;
+custo = valorCustro + custo_distribuidor + custo_impostos;
+
+console.log("Valor de venda : R$ ", custo)
